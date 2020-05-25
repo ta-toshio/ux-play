@@ -1,0 +1,105 @@
+$animateTime: 10000ms;
+$particleNum: 14;
+
+@mixin centering {
+  transform-origin: 250px 250px;
+}
+
+@mixin animationFill {
+  animation-fill-mode: forwards;
+}
+
+.likeButton {
+  cursor: pointer;
+
+  .explosion {
+    transform: scale(0.02);
+    stroke: rgba(221, 70, 136, 1);
+    fill: none;
+    opacity: 0;
+    stroke-width: 1;
+    @include centering;
+  }
+
+  .heart {
+    fill: rgba(6, 6, 6, 0.24);
+    transform: scale(0.8);
+    @include centering;
+  }
+
+  &.clicked {
+
+    .explosion {
+      animation: explosionAnime $animateTime;
+      @include animationFill;
+    }
+
+    .heart {
+      animation: heartAnime $animateTime;
+      @include animationFill;
+    }
+  }
+}
+
+@keyframes explosionAnime {
+  0% {
+    opacity: 0;
+    transform: scale(0.01);
+  }
+  1% {
+    opacity: 1;
+    transform: scale(0.01);
+  }
+
+  5% {
+    stroke-width: 200;
+  }
+
+  20% {
+    stroke-width: 300;
+  }
+
+  50% {
+    stroke: rgba(204, 142, 245, 1);
+    transform: scale(1.1);
+    stroke-width: 1;
+  }
+  50.1% {
+    stroke-width: 0;
+  }
+
+  100% {
+    stroke: rgba(204, 142, 245, 1);
+    transform: scale(1.1);
+    stroke-width: 0;
+  }
+}
+
+@keyframes heartAnime {
+  0% {
+    transform: scale(0);
+    fill: #E2264D;
+  }
+
+  39% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+
+  70% {
+    transform: scale(1, 1) translate(0%, -10%);
+  }
+  75% {
+    transform: scale(1.1, 0.9) translate(0%, 5%);
+  }
+  80% {
+    transform: scale(0.95, 1.05) translate(0%, -3%);
+  }
+  100% {
+    transform: scale(1.0, 1.0) translate(0%, 0%);
+    fill: #E2264D;
+  }
+}

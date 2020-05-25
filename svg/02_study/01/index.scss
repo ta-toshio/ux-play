@@ -1,0 +1,58 @@
+
+$animateTime: 10000ms;
+$particleNum: 14;
+
+@mixin centering {
+  transform-origin: 250px 250px;
+}
+
+@mixin animationFill {
+  animation-fill-mode: forwards;
+}
+
+.likeButton {
+  cursor: pointer;
+
+  .heart {
+    fill: rgba(6, 6, 6, 0.24);
+    transform: scale(0.8);
+    @include centering;
+  }
+
+  &.clicked {
+
+    .heart {
+      animation: heartAnime $animateTime;
+      @include animationFill;
+    }
+  }
+}
+
+@keyframes heartAnime {
+  0% {
+    transform: scale(0);
+    fill: #E2264D;
+  }
+
+  39% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+
+  70% {
+    transform: scale(1, 1) translate(0%, -10%);
+  }
+  75% {
+    transform: scale(1.1, 0.9) translate(0%, 5%);
+  }
+  80% {
+    transform: scale(0.95, 1.05) translate(0%, -3%);
+  }
+  100% {
+    transform: scale(1.0, 1.0) translate(0%, 0%);
+    fill: #E2264D;
+  }
+}
