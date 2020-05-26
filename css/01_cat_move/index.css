@@ -1,0 +1,50 @@
+.stage {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 10px auto;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cat_v {
+  position: relative;
+  animation: 2s ease-in-out infinite alternate-reverse fly_v;
+  width: 100%;
+  background-color: red;
+}
+
+.cat_h {
+  position: absolute;
+  animation: 2s ease-in-out infinite alternate-reverse fly_h;
+}
+
+.cat {
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  background-image: url(https://ics-creative.github.io/200520_features_css_svg_canvas/imgs/longcat_side.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@keyframes fly_v {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(320px);
+  }
+}
+
+@keyframes fly_h {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(420px);
+  }
+}
