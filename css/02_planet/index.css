@@ -1,0 +1,97 @@
+
+.stage {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 10px auto;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  text-align: center;
+}
+
+.system {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+}
+
+.sun {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+.sun::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -54px;
+  left: -54px;
+  border-radius: 100%;
+  border: 2px solid #534741;
+  background-color: #ffd000;
+}
+
+.planet {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 120px;
+  transform-origin: -120px 0;
+  animation: 8s linear infinite rotate;
+}
+
+.planet::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: -240px;
+  top: -120px;
+  border-radius: 100%;
+  border: 1px dotted #534741;
+}
+
+.planet::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  left: -20px;
+  border-radius: 100%;
+  border: 2px solid #534741;
+  background-color: #ffd000;
+}
+
+.planet .planet {
+  left: 60px;
+  transform-origin: -60px 0;
+}
+
+.planet .planet::before {
+  width: 120px;
+  height: 120px;
+  left: -100px;
+  top: -60px;
+}
+
+.planet .planet::after {
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: 10px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

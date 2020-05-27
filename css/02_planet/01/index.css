@@ -1,0 +1,38 @@
+.stage {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 10px auto;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  text-align: center;
+}
+
+.system {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+}
+
+.sun {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+.sun::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -54px;
+  left: -54px;
+  border-radius: 100%;
+  border: 2px solid #534741;
+  background-color: #ffd000;
+}
