@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 200px 0;
+}
+
+.contact {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-height: 200px;
+  background-color: #f0f3f5;
+}
+
+/*
+.contact::before {
+  position: absolute;
+  top: -196px;
+  left: 50%;
+  display: block;
+  width: 336px;
+  height: 284px;
+  content: "";
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+*/
+
+.contact__illust {
+  position: absolute;
+  top: -76px;
+  left: 50%;
+  width: 300px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 980px) {
+  .contact__illust {
+    top: -156px;
+    width: 500px;
+  }
+}
+
+.il-contact {
+  position: relative;
+  background: #fff;
+}
+
+.il-contact:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 44px;
+  background: #f0f3f5;
+}
+
+.illust .spacer {
+  padding-bottom: calc(240% / 6);
+  position: relative;
+  height: 0;
+}
+
+.illust svg {
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* 以下イラストアニメーション */
+.il-contact.active .body {
+  animation: lanlan .5s infinite alternate cubic-bezier(.445, .05, .55, .95);
+}
+
+.il-contact .women .body {
+  transform-origin: 380px 217px;
+}
+
+.il-contact.active .head {
+  animation: lonlon .5s infinite alternate;
+}
+
+.il-contact .women .head,
+.il-contact .women .wrap {
+  transform-origin: 380px 106px;
+}
+
+.il-contact .men .body {
+  transform-origin: 223px 217px;
+}
+
+.il-contact .men .head,
+.il-contact .men .wrap {
+  transform-origin: 223px 108px;
+}
+
+.il-contact.active .wrap {
+  animation: lunlun 1s infinite alternate;
+}
+
+.contact_0 {
+  fill: #fff;
+}
+
+.contact_2 {
+  fill: #fee4be;
+}
+
+.contact_3 {
+  fill: none;
+  stroke: #959ea7;
+  stroke-width: 3.7599;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.contact_4 {
+  fill: none;
+  stroke: #959ea7;
+  stroke-width: 4.5119;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.contact_5 {
+  fill: #4fbbaa;
+}
+
+.contact_6 {
+  fill: #cdd6dd;
+}
+
+.contact_8 {
+  fill: #f0f3f5;
+}
+
+.contact_12 {
+  fill: none;
+  stroke: #ffd66e;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+
+@keyframes lanlan {
+  from {
+    transform: scale(1.01, .98)
+  }
+  to {
+    transform: scale(.98, 1.01)
+  }
+}
+
+@keyframes lonlon {
+  from {
+    transform: translateY(6px)
+  }
+  to {
+    transform: none
+  }
+}
+
+@keyframes lunlun {
+  from {
+    transform: rotate(-5deg)
+  }
+  to {
+    transform: rotate(5deg)
+  }
+}
