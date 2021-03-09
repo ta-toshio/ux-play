@@ -1,0 +1,61 @@
+body {
+  padding: 10px;
+}
+
+.swing {
+  position: relative;
+  display: block;
+  width: 200px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: swing linear 4s infinite;
+  transform-origin: center -20px;
+}
+
+.swing img {
+  border: 5px solid #f8f8f8;
+  z-index: 2;
+  display: block;
+  width: 200px;
+}
+
+.swing:after {
+  content: '';
+  border: 1px solid #999;
+  top: -10px;
+  z-index: -1;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.swing:before {
+  content: '';
+  top: -14px;
+  z-index: 5;
+  left: 54%;
+  width: 5px;
+  border-radius: 50% 50%;
+  background: #000;
+  height: 5px;
+  position: absolute;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
