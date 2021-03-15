@@ -1,0 +1,39 @@
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+
+  flex: 0 0 calc(100%/3 - 5px);
+  margin-bottom: 10px;
+
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  background: rgba(0, 0, 0, .3);
+}
+
+.body {
+  flex: 1 0 0%;
+  padding: 16px;
+}
+
+.footer {
+  padding: 16px;
+}
