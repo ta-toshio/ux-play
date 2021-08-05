@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+}
+
+.nav {
+  height: 40px;
+  background: #4fbbaa;
+}
+
+.footer {
+  height: 200px;
+  background: #890a0c;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background: #8ecbe6;
+
+  height: calc(100vh - 52px);/* nav + scroll */
+}
+
+.content-header {
+  height: 40px;
+}
+
+.content-body {
+  height: 100%;
+}
+
+
+.cal-items-wrapper {
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 100%;
+}
+
+.cal-items {
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    background: #cc8ef5;
+    margin-right: 16px;
+    vertical-align: top;
+}
+
+.cal-item {
+  height: 200px;
+  background: #e743c3;
+  margin-bottom: 8px;
+}
+
+
+/* scrollbar */
+.scrollbar::-webkit-scrollbar-button {
+  display: block;
+  height: 4px;
+  width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(9,30,66,.25);
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece {
+  background: rgba(9,30,66,.15);
+}
+
+.scrollbar {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+}
